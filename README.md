@@ -1,3 +1,3 @@
 # shalomma.github.io
 
-[https://shalomma.github.io](shalomma.github.io)
+<a href="https://shalomma.github.io" target="_blank">https://shalomma.github.io</a>
