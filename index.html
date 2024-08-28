@@ -1,93 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (previous head content remains the same) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maayan Shalom's Techie Avocado Grove 🥑</title>
     <style>
-        /* ... (previous styles remain the same) ... */
-        
-        .github-feed {
-            background-color: #f6f8fa;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 16px;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #24292e;
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --background-color: #f0f8f0;
+            --text-color: #333;
         }
-        .github-feed h3 {
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        header:after {
+            content: "🥑";
+            font-size: 3rem;
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            transform: rotate(15deg);
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
             margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 16px;
+            display: flex;
+            align-items: center;
         }
-        .github-feed ul {
+        h2::before {
+            content: attr(data-emoji);
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        ul {
+            padding-left: 20px;
             list-style-type: none;
-            padding-left: 0;
         }
-        .github-feed li {
-            margin-bottom: 8px;
+        ul li::before {
+            content: "🌱 ";
         }
-        .github-feed li::before {
-            content: "🍃";  /* avocado leaf emoji */
-            margin-right: 8px;
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 1rem 0;
+            color: var(--secondary-color);
         }
-        .github-feed a {
-            color: #0366d6;
+        .fun-fact {
+            background-color: #e8f6e8;
+            border-left: 5px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tech-item {
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease;
+        }
+        .tech-item:hover {
+            transform: scale(1.05);
+        }
+        a {
+            color: var(--secondary-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
-        .github-feed a:hover {
+        a:hover {
+            color: var(--primary-color);
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <!-- ... (previous body content remains the same) ... -->
-    
-    <section id="github-activity">
-        <h2 data-emoji="🐙">GitHub Avocado Grove Activity</h2>
-        <div class="github-feed" id="github-feed">
-            <h3>Loading latest GitHub activity...</h3>
-        </div>
-    </section>
+    <header>
+        <h1>Maayan Shalom's Techie Avocado Grove 🥑</h1>
+        <p>Where Data Science meets Guacamole</p>
+    </header>
+    <main>
+        <section id="intro">
+            <h2 data-emoji="👋">Hello, World!</h2>
+            <p>Welcome to my digital avocado grove! I'm Maayan, a data scientist and machine learning engineer with a green thumb for both code and plants. When I'm not training models, I'm probably training avocado seeds to grow into majestic indoor trees.</p>
+            <div class="quote">
+                "The secret of getting ahead is getting started." - Mark Twain
+            </div>
+        </section>
 
-    <!-- ... (rest of the body content) ... -->
+        <section id="what-i-do">
+            <h2 data-emoji="🌱">What I Grow</h2>
+            <ul>
+                <li>Sophisticated data science solutions (they need less water than avocados)</li>
+                <li>Scalable RAG systems for processing complex textual data</li>
+                <li>Serverless backend architectures (they grow faster in the cloud)</li>
+                <li>A forest of avocado plants (my proudest non-digital achievement)</li>
+            </ul>
+        </section>
 
-    <script>
-        function fetchGitHubActivity() {
-            fetch('https://api.github.com/users/shalomma/events/public')
-                .then(response => response.json())
-                .then(data => {
-                    const feed = document.getElementById('github-feed');
-                    let html = '<h3>Recent GitHub Activity</h3><ul>';
-                    
-                    data.slice(0, 5).forEach(event => {
-                        let eventText = '';
-                        switch(event.type) {
-                            case 'PushEvent':
-                                eventText = `Pushed to ${event.repo.name}`;
-                                break;
-                            case 'CreateEvent':
-                                eventText = `Created ${event.payload.ref_type} in ${event.repo.name}`;
-                                break;
-                            case 'IssuesEvent':
-                                eventText = `${event.payload.action} issue in ${event.repo.name}`;
-                                break;
-                            default:
-                                eventText = `Action on ${event.repo.name}`;
-                        }
-                        html += `<li><a href="https://github.com/${event.repo.name}" target="_blank">${eventText}</a></li>`;
-                    });
-                    
-                    html += '</ul>';
-                    feed.innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Error fetching GitHub activity:', error);
-                    document.getElementById('github-feed').innerHTML = '<p>Failed to load GitHub activity. Please try again later.</p>';
-                });
-        }
+        <section id="tech-stack">
+            <h2 data-emoji="🔧">My Tech Nursery</h2>
+            <div class="tech-stack">
+                <span class="tech-item">Deep Learning</span>
+                <span class="tech-item">Reinforcement Learning</span>
+                <span class="tech-item">MLOps</span>
+                <span class="tech-item">Software Engineering</span>
+                <span class="tech-item">AWS</span>
+                <span class="tech-item">Serverless</span>
+                <span class="tech-item">Microservices</span>
+                <span class="tech-item">Terraform</span>
+            </div>
+        </section>
 
-        // Call the function when the page loads
-        fetchGitHubActivity();
-    </script>
+        <section id="projects">
+            <h2 data-emoji="🚀">Cool Stuff I've Built</h2>
+            <p>I'm particularly proud of my work on AI for social good. I've been analyzing social network data to spot pain points in Israeli society. It's like being a digital doctor for social issues!</p>
+            <p>Currently, I'm diving deep into Reinforcement Learning for my MSc thesis. It's like teaching an AI to grow the perfect avocado! 🥑🤖</p>
+        </section>
+
+        <section id="fun-facts">
+            <h2 data-emoji="😺">Fun Facts</h2>
+            <div class="fun-fact">
+                <p>My house is basically an avocado jungle. I've grown so many avocado seeds that I'm considering opening a guacamole stand. 🥑🌿</p>
+            </div>
+            <div class="fun-fact">
+                <p>I have a ginger female cat named Nancy. She's the CTO (Chief Treat Officer) of my home office. 🐱💼</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 data-emoji="📫">Let's Connect!</h2>
+            <p>If you want to chat about data science, machine learning, or exchange avocado growing tips, reach out!</p>
+            <ul>
+                <li>Email: <a href="mailto:sha.maayan@gmail.com">sha.maayan@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/shalomma" target="_blank">github.com/shalomma</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/maayanshalom" target="_blank">linkedin.com/in/maayanshalom</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
