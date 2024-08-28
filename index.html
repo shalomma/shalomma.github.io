@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maayan Shalom | Data Scientist & ML Engineer</title>
+    <title>Maayan Shalom's Techie Avocado Grove 🥑</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --background-color: #f5f5f5;
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --background-color: #f0f8f0;
             --text-color: #333;
         }
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -24,6 +24,7 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -32,7 +33,15 @@
         header p {
             margin: 0;
             font-size: 1.2rem;
-            opacity: 0.8;
+            opacity: 0.9;
+        }
+        header:after {
+            content: "🥑";
+            font-size: 3rem;
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            transform: rotate(15deg);
         }
         main {
             max-width: 800px;
@@ -41,19 +50,34 @@
         }
         section {
             background-color: white;
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
         }
         h2 {
             color: var(--secondary-color);
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 0.5rem;
             margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        h2::before {
+            content: attr(data-emoji);
+            margin-right: 10px;
+            font-size: 1.5em;
         }
         ul {
             padding-left: 20px;
+            list-style-type: none;
+        }
+        ul li::before {
+            content: "🌱 ";
         }
         .quote {
             font-style: italic;
@@ -62,10 +86,11 @@
             color: var(--secondary-color);
         }
         .fun-fact {
-            background-color: #e8f4f8;
+            background-color: #e8f6e8;
             border-left: 5px solid var(--secondary-color);
             padding: 1rem;
             margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
         }
         .tech-stack {
             display: flex;
@@ -78,42 +103,48 @@
             border-radius: 20px;
             padding: 5px 15px;
             font-size: 0.9rem;
+            transition: transform 0.2s ease;
+        }
+        .tech-item:hover {
+            transform: scale(1.05);
         }
         a {
             color: var(--secondary-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         a:hover {
+            color: var(--primary-color);
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Maayan Shalom</h1>
-        <p>Data Scientist & Machine Learning Engineer</p>
+        <h1>Maayan Shalom's Techie Avocado Grove 🥑</h1>
+        <p>Where Data Science meets Guacamole</p>
     </header>
     <main>
         <section id="intro">
-            <h2>About Me</h2>
-            <p>Welcome to my digital space! I'm Maayan, a data scientist and machine learning engineer with a passion for innovative technologies and a green thumb. I blend cutting-edge ML solutions with a love for growth—both in code and in my avocado garden.</p>
+            <h2 data-emoji="👋">Hello, World!</h2>
+            <p>Welcome to my digital avocado grove! I'm Maayan, a data scientist and machine learning engineer with a green thumb for both code and plants. When I'm not training models, I'm probably training avocado seeds to grow into majestic indoor trees.</p>
             <div class="quote">
                 "The secret of getting ahead is getting started." - Mark Twain
             </div>
         </section>
 
-        <section id="expertise">
-            <h2>Areas of Expertise</h2>
+        <section id="what-i-do">
+            <h2 data-emoji="🌱">What I Grow</h2>
             <ul>
-                <li>Development of sophisticated data science solutions</li>
-                <li>Design and implementation of scalable RAG systems</li>
-                <li>Architecture of serverless backend solutions</li>
-                <li>AI for social good initiatives</li>
+                <li>Sophisticated data science solutions (they need less water than avocados)</li>
+                <li>Scalable RAG systems for processing complex textual data</li>
+                <li>Serverless backend architectures (they grow faster in the cloud)</li>
+                <li>A forest of avocado plants (my proudest non-digital achievement)</li>
             </ul>
         </section>
 
         <section id="tech-stack">
-            <h2>Technology Stack</h2>
+            <h2 data-emoji="🔧">My Tech Nursery</h2>
             <div class="tech-stack">
                 <span class="tech-item">Deep Learning</span>
                 <span class="tech-item">Reinforcement Learning</span>
@@ -127,24 +158,24 @@
         </section>
 
         <section id="projects">
-            <h2>Notable Projects</h2>
-            <p>One of my most impactful projects involves leveraging AI for social good. By analyzing social network data, I've been working on identifying pain points in Israeli society, effectively acting as a digital diagnostician for social issues.</p>
-            <p>Currently, I'm diving deep into Reinforcement Learning for my MSc thesis, exploring new frontiers in machine learning and decision-making processes.</p>
+            <h2 data-emoji="🚀">Cool Stuff I've Built</h2>
+            <p>I'm particularly proud of my work on AI for social good. I've been analyzing social network data to spot pain points in Israeli society. It's like being a digital doctor for social issues!</p>
+            <p>Currently, I'm diving deep into Reinforcement Learning for my MSc thesis. It's like teaching an AI to grow the perfect avocado! 🥑🤖</p>
         </section>
 
-        <section id="personal">
-            <h2>Beyond the Code</h2>
+        <section id="fun-facts">
+            <h2 data-emoji="😺">Fun Facts</h2>
             <div class="fun-fact">
-                <p>When I'm not immersed in data and algorithms, you'll find me nurturing my indoor avocado forest. My home office is a unique blend of silicon and greenery.</p>
+                <p>My house is basically an avocado jungle. I've grown so many avocado seeds that I'm considering opening a guacamole stand. 🥑🌿</p>
             </div>
             <div class="fun-fact">
-                <p>I share my workspace with Nancy, my ginger cat and unofficial assistant. She specializes in keyboard warming and moral support.</p>
+                <p>I have a ginger female cat named Nancy. She's the CTO (Chief Treat Officer) of my home office. 🐱💼</p>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Let's Connect</h2>
-            <p>Whether you want to discuss data science, machine learning, or exchange avocado growing tips, I'm always open to new connections and collaborations.</p>
+            <h2 data-emoji="📫">Let's Connect!</h2>
+            <p>If you want to chat about data science, machine learning, or exchange avocado growing tips, reach out!</p>
             <ul>
                 <li>Email: <a href="mailto:sha.maayan@gmail.com">sha.maayan@gmail.com</a></li>
                 <li>GitHub: <a href="https://github.com/shalomma" target="_blank">github.com/shalomma</a></li>
