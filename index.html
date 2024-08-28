@@ -3,65 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maayan Shalom's Techie Jungle</title>
+    <title>Maayan Shalom | Data Scientist & ML Engineer</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+        }
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #e6ffe6;
-            color: #333;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
         header {
-            background-color: #4CAF50;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 1rem;
-            position: relative;
+            padding: 2rem 0;
         }
         header h1 {
-            margin-bottom: 0;
+            margin: 0;
+            font-size: 2.5rem;
         }
-        header:after {
-            content: "🥑";
-            font-size: 2rem;
-            position: absolute;
-            bottom: -15px;
-            right: 20px;
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.8;
         }
         main {
-            padding: 2rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
         section {
             background-color: white;
-            border-radius: 10px;
-            padding: 1rem;
+            border-radius: 8px;
+            padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h2 {
-            color: #4CAF50;
-            border-bottom: 2px dashed #4CAF50;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 0.5rem;
+            margin-top: 0;
         }
         ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li:before {
-            content: "🌱 ";
+            padding-left: 20px;
         }
         .quote {
             font-style: italic;
             text-align: center;
             margin: 1rem 0;
+            color: var(--secondary-color);
         }
         .fun-fact {
-            background-color: #FFF9C4;
-            border-left: 5px solid #FBC02D;
+            background-color: #e8f4f8;
+            border-left: 5px solid var(--secondary-color);
             padding: 1rem;
             margin: 1rem 0;
         }
@@ -71,38 +73,47 @@
             gap: 10px;
         }
         .tech-item {
-            background-color: #E1F5FE;
+            background-color: var(--secondary-color);
+            color: white;
             border-radius: 20px;
-            padding: 5px 10px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+        }
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Maayan Shalom's Techie Jungle</h1>
-        <p>Where Data Science meets Avocado Farming 🥑🌿</p>
+        <h1>Maayan Shalom</h1>
+        <p>Data Scientist & Machine Learning Engineer</p>
     </header>
     <main>
         <section id="intro">
-            <h2>Hello, World! 👋</h2>
-            <p>Welcome to my digital garden! I'm Maayan, a data scientist and machine learning engineer with a green thumb for both code and plants. When I'm not training models, I'm probably training avocado seeds to grow into majestic indoor trees.</p>
+            <h2>About Me</h2>
+            <p>Welcome to my digital space! I'm Maayan, a data scientist and machine learning engineer with a passion for innovative technologies and a green thumb. I blend cutting-edge ML solutions with a love for growth—both in code and in my avocado garden.</p>
             <div class="quote">
                 "The secret of getting ahead is getting started." - Mark Twain
             </div>
         </section>
 
-        <section id="what-i-do">
-            <h2>What I Grow 🌱</h2>
+        <section id="expertise">
+            <h2>Areas of Expertise</h2>
             <ul>
-                <li>Sophisticated data science solutions (they need less water than avocados)</li>
-                <li>Scalable RAG systems for processing complex textual data</li>
-                <li>Serverless backend architectures (they grow faster in the cloud)</li>
-                <li>A forest of avocado plants (my proudest non-digital achievement)</li>
+                <li>Development of sophisticated data science solutions</li>
+                <li>Design and implementation of scalable RAG systems</li>
+                <li>Architecture of serverless backend solutions</li>
+                <li>AI for social good initiatives</li>
             </ul>
         </section>
 
         <section id="tech-stack">
-            <h2>My Tech Nursery 🔧</h2>
+            <h2>Technology Stack</h2>
             <div class="tech-stack">
                 <span class="tech-item">Deep Learning</span>
                 <span class="tech-item">Reinforcement Learning</span>
@@ -116,23 +127,24 @@
         </section>
 
         <section id="projects">
-            <h2>Cool Stuff I've Built 🚀</h2>
-            <p>I'm particularly proud of my work on AI for social good. I've been analyzing social network data to spot pain points in Israeli society. It's like being a digital doctor for social issues!</p>
+            <h2>Notable Projects</h2>
+            <p>One of my most impactful projects involves leveraging AI for social good. By analyzing social network data, I've been working on identifying pain points in Israeli society, effectively acting as a digital diagnostician for social issues.</p>
+            <p>Currently, I'm diving deep into Reinforcement Learning for my MSc thesis, exploring new frontiers in machine learning and decision-making processes.</p>
         </section>
 
-        <section id="fun-facts">
-            <h2>Fun Facts 🐱</h2>
+        <section id="personal">
+            <h2>Beyond the Code</h2>
             <div class="fun-fact">
-                <p>My house is basically an avocado jungle. I've grown so many avocado seeds that I'm considering opening a guacamole stand.</p>
+                <p>When I'm not immersed in data and algorithms, you'll find me nurturing my indoor avocado forest. My home office is a unique blend of silicon and greenery.</p>
             </div>
             <div class="fun-fact">
-                <p>I have a ginger female cat named Nancy. She's the CTO (Chief Treat Officer) of my home office.</p>
+                <p>I share my workspace with Nancy, my ginger cat and unofficial assistant. She specializes in keyboard warming and moral support.</p>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Let's Connect! 📫</h2>
-            <p>If you want to chat about data science, machine learning, or exchange avocado growing tips, reach out!</p>
+            <h2>Let's Connect</h2>
+            <p>Whether you want to discuss data science, machine learning, or exchange avocado growing tips, I'm always open to new connections and collaborations.</p>
             <ul>
                 <li>Email: <a href="mailto:sha.maayan@gmail.com">sha.maayan@gmail.com</a></li>
                 <li>GitHub: <a href="https://github.com/shalomma" target="_blank">github.com/shalomma</a></li>
