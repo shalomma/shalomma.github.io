@@ -157,23 +157,30 @@
 
         .skills {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .skill-tag {
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.95rem;
+            position: relative;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
             text-align: center;
-            transition: all 0.3s;
-            border-left: 2px solid var(--primary-color);
         }
 
         .skill-tag:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
             background-color: var(--highlight-bg);
-            transform: translateX(5px);
-            padding-left: 1.5rem;
         }
 
         @media (max-width: 768px) {
@@ -363,21 +370,21 @@
         </div>
     </section>
 
-    <section>
+        <section>
         <h2>Technical Skills</h2>
         <div class="skills">
-            <span class="skill-tag">Large Language Models</span>
-            <span class="skill-tag">Reinforcement Learning</span>
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">AI Safety</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">Distributed Computing</span>
-            <span class="skill-tag">ML Infrastructure</span>
-            <span class="skill-tag">RLHF</span>
-            <span class="skill-tag">Multimodal Systems</span>
-            <span class="skill-tag">RAG Systems</span>
-            <span class="skill-tag">Model Evaluation</span>
+            <div class="skill-tag">Large Language Models</div>
+            <div class="skill-tag">Reinforcement Learning</div>
+            <div class="skill-tag">Machine Learning</div>
+            <div class="skill-tag">AI Safety</div>
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">PyTorch</div>
+            <div class="skill-tag">Distributed Computing</div>
+            <div class="skill-tag">RLHF</div>
+            <div class="skill-tag">Multimodal Systems</div>
+            <div class="skill-tag">RAG Systems</div>
+            <div class="skill-tag">Model Evaluation</div>
+            <div class="skill-tag">ML Infrastructure</div>
         </div>
     </section>
 </body>
