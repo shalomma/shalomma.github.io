@@ -3,287 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maayan Shalom's Techie Avocado Grove 🥑</title>
+    <title>Maayan Shalom - AI Research Engineer</title>
     <style>
         :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --background-color: #f0f8f0;
-            --text-color: #333;
+            --primary-color: #10a37f;
+            --text-color: #374151;
+            --background-color: #ffffff;
+            --secondary-bg: #f9fafb;
+            --border-color: #e5e7eb;
         }
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            line-height: 1.6;
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
             color: var(--text-color);
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            position: relative;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 0;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        header:after {
-            content: "🥑";
-            font-size: 3rem;
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-            transform: rotate(15deg);
-        }
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            background-color: white;
-            border-radius: 12px;
+            background-color: var(--background-color);
+            max-width: 1000px;
+            margin: 0 auto;
             padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
         }
-        section:hover {
-            transform: translateY(-5px);
-        }
-        h2 {
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-        }
-        h2::before {
-            content: attr(data-emoji);
-            margin-right: 10px;
-            font-size: 1.5em;
-        }
-        ul {
-            padding-left: 20px;
-            list-style-type: none;
-        }
-        ul li::before {
-            content: "🌱 ";
-        }
-        .quote {
-            font-style: italic;
+
+        header {
             text-align: center;
-            margin: 1rem 0;
-            color: var(--secondary-color);
+            margin-bottom: 3rem;
         }
-        .fun-fact {
-            background-color: #e8f6e8;
-            border-left: 5px solid var(--secondary-color);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .tech-item {
-            background-color: var(--secondary-color);
-            color: white;
-            border-radius: 20px;
-            padding: 5px 15px;
-            font-size: 0.9rem;
-            transition: transform 0.2s ease;
-        }
-        .tech-item:hover {
-            transform: scale(1.05);
-        }
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
+
+        h1 {
             color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
             text-decoration: underline;
         }
-                #avocado-simulator {
-            text-align: center;
-            padding: 20px;
-            background-color: #f0f8f0;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        #avocado-canvas {
-            border: 2px solid #2ecc71;
+
+        .summary {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-bg);
             border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
-        #grow-button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #2ecc71;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+
+        section {
+            margin-bottom: 2.5rem;
         }
-        #grow-button:hover {
-            background-color: #27ae60;
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .position {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .date {
+            color: #6b7280;
+            white-space: nowrap;
+        }
+
+        .company-description {
+            font-style: italic;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: var(--secondary-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .date {
+                margin-top: 0.25rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Maayan Shalom's Techie Avocado Grove 🥑</h1>
-        <p>Where Data Science meets Guacamole</p>
+        <h1>Maayan Shalom</h1>
+        <div class="contact-info">
+            <a href="mailto:sha.maayan@gmail.com">sha.maayan@gmail.com</a>
+            <span>+972 50 99 55 907</span>
+            <span>Tel-Aviv</span>
+            <a href="https://github.com/shalomma/" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/maayanshalom/" target="_blank">LinkedIn</a>
+        </div>
     </header>
-    <main>
-        <section id="intro">
-            <h2 data-emoji="👋">Hello, World!</h2>
-            <p>Welcome to my digital avocado grove! I'm Maayan, a data scientist and machine learning engineer with a green thumb for both code and plants. When I'm not training models, I'm probably training avocado seeds to grow into majestic indoor trees.</p>
-            <div class="quote">
-                "The secret of getting ahead is getting started." - Mark Twain
+
+    <section class="summary">
+        <p>ML researcher and full-stack engineer specializing in production AI systems and safety-critical applications. Extensive experience implementing transformer architectures and large-scale ML pipelines, with proven expertise scaling systems from research to production. Strong technical foundation in Python, distributed computing, and ML infrastructure, complemented by graduate research in reinforcement learning. Track record of building robust evaluation frameworks and safety monitoring systems processing millions of daily interactions across multiple startups.</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Hive-Urban</div>
+                    <div class="position">Founding Data Scientist, Technical Lead</div>
+                </div>
+                <div class="date">June 2023 - Present</div>
             </div>
-        </section>
-
-        <section id="avocado-simulator">
-        <h2 data-emoji="🌱">Grow Your Own Avocado!</h2>
-        <canvas id="avocado-canvas" width="300" height="300"></canvas>
-        <br>
-        <button id="grow-button">Grow! 🌿</button>
-        </section>
-
-        <section id="what-i-do">
-            <h2 data-emoji="🌱">What I Grow</h2>
+            <div class="company-description">
+                AI startup empowering democratic policy makers and research institutes with data-driven insights and misinformation detection (grew from 4 to 20+ employees)
+            </div>
             <ul>
-                <li>Sophisticated data science solutions (they need less water than avocados)</li>
-                <li>Scalable RAG systems for processing complex textual data</li>
-                <li>Serverless backend architectures (they grow faster in the cloud)</li>
-                <li>A forest of avocado plants (my proudest non-digital achievement)</li>
+                <li>Lead a team of 6 engineers and data scientists in developing ML infrastructure and backend systems, collaborating directly with CEO to translate strategic vision into technical solutions</li>
+                <li>Architected and deployed an agentic RAG system using GPT-4, incorporating lexical, semantic, and graphical search capabilities, processing millions of data points through serverless pipelines</li>
+                <li>Developed crisis-response system for real-time misinformation detection, combining multi-modal verification for text/image content with automated fact-checking and human-in-the-loop validation, achieving high system reliability and recall during national emergency</li>
+                <li>Implemented multi-lingual ML system processing 500K+ daily posts, including fine-tuned language models for Hebrew/Arabic, custom topic modeling, and automated evaluation pipelines for content quality and bias detection</li>
+                <li>Designed and implemented scalable serverless data pipelines for ingestion and enrichment, handling millions of data points and user requests</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="tech-stack">
-            <h2 data-emoji="🔧">My Tech Nursery</h2>
-            <div class="tech-stack">
-                <span class="tech-item">Deep Learning</span>
-                <span class="tech-item">Reinforcement Learning</span>
-                <span class="tech-item">MLOps</span>
-                <span class="tech-item">Software Engineering</span>
-                <span class="tech-item">AWS</span>
-                <span class="tech-item">Serverless</span>
-                <span class="tech-item">Microservices</span>
-                <span class="tech-item">Terraform</span>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Upword</div>
+                    <div class="position">Senior Data Scientist (Part-time)</div>
+                </div>
+                <div class="date">March 2023 - August 2023</div>
             </div>
-        </section>
-
-        <section id="projects">
-            <h2 data-emoji="🚀">Cool Stuff I've Built</h2>
-            <p>I'm particularly proud of my work on AI for social good. I've been analyzing social network data to spot pain points in Israeli society. It's like being a digital doctor for social issues!</p>
-            <p>Currently, I'm diving deep into Reinforcement Learning for my MSc thesis. It's like teaching an AI to grow the perfect avocado! 🥑🤖</p>
-        </section>
-
-        <section id="fun-facts">
-            <h2 data-emoji="😺">Fun Facts</h2>
-            <div class="fun-fact">
-                <p>My house is basically an avocado jungle. I've grown so many avocado seeds that I'm considering opening a guacamole stand. 🥑🌿</p>
+            <div class="company-description">
+                AI-powered knowledge management platform (Achieved Series A funding)
             </div>
-            <div class="fun-fact">
-                <p>I have a ginger female cat named Nancy. She's the CTO (Chief Treat Officer) of my home office. 🐱💼</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 data-emoji="📫">Let's Connect!</h2>
-            <p>If you want to chat about data science, machine learning, or exchange avocado growing tips, reach out!</p>
             <ul>
-                <li>Email: <a href="mailto:sha.maayan@gmail.com">sha.maayan@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/shalomma" target="_blank">github.com/shalomma</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/maayanshalom" target="_blank">linkedin.com/in/maayanshalom</a></li>
+                <li>Served as lead data scientist while pursuing graduate research, spearheading the development of core ML infrastructure</li>
+                <li>Architected production-grade document understanding system with custom ML pipeline for intelligent content analysis and abstractive summarization, processing 100K+ documents monthly with comprehensive safety validation</li>
+                <li>Developed real-time conversational RAG system featuring custom embedding models, hybrid retrieval architecture, and dynamic content augmentation, implementing WebSocket-based infrastructure for seamless chat interactions at 10K+ requests/hour</li>
+                <li>Drove technical innovation and AI strategy, directly contributing to successful Series A fundraising through rapid research-to-production deployment and robust system architecture</li>
             </ul>
-        </section>
-    </main>
-    <script>
-        // Avocado Growth Simulator
-        const canvas = document.getElementById('avocado-canvas');
-        const ctx = canvas.getContext('2d');
-        const growButton = document.getElementById('grow-button');
+        </div>
 
-        let growthStage = 0;
-        const maxGrowthStage = 5;
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Darrow</div>
+                    <div class="position">Senior Data Scientist</div>
+                </div>
+                <div class="date">February 2022 - September 2022</div>
+            </div>
+            <div class="company-description">
+                Legal tech startup using AI to identify legal violations and predict case outcomes, scaling from 20 to 100 employees
+            </div>
+            <ul>
+                <li>Developed safety-critical NLP system for detecting harmful business practices, implementing robust validation pipelines and ethical AI principles to protect consumer rights while ensuring fair and unbiased detection</li>
+                <li>Led ML research for legal case underwriting system, collaborating with legal experts to develop LLM-based reasoning framework that analyzes case details, precedents, and relevant laws to predict litigation outcomes with 85% accuracy</li>
+                <li>Architected novel few-shot learning framework for violation detection, combining semantic understanding with rule-based reasoning to handle complex legal scenarios with limited training data</li>
+            </ul>
+        </div>
 
-        function drawAvocado(stage) {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Zone7</div>
+                    <div class="position">Founding Data Scientist, Technical Lead</div>
+                </div>
+                <div class="date">January 2021 - February 2022</div>
+            </div>
+            <div class="company-description">
+                AI-driven athlete performance optimization platform serving elite sports organizations including Premier League, La Liga, MLS, NFL, and NBA clubs (3rd employee, acquired by Svexa)
+            </div>
+            <ul>
+                <li>Co-led foundational ML research and development with CTO as company's first Data Scientist, architecting deep learning infrastructure processing real-time data from hundreds of professional athletes worth millions in contract value</li>
+                <li>Designed safety-critical monitoring system using uncertainty quantification and statistical validation, ensuring reliable predictions for high-stakes decisions about athlete health and performance</li>
+                <li>Developed novel active learning pipeline integrating domain expertise from sports scientists and medical professionals, optimizing data collection and model training while maintaining strict safety measures</li>
+                <li>Implemented scalable training and validation infrastructure for distributed deep learning models, establishing robust evaluation protocols that became company standard for model deployment</li>
+            </ul>
+        </div>
 
-            // Draw pot
-            ctx.fillStyle = '#8B4513';
-            ctx.fillRect(100, 200, 100, 80);
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Intel Corporation</div>
+                    <div class="position">Product Development Engineer</div>
+                </div>
+                <div class="date">March 2016 - December 2018</div>
+            </div>
+            <div class="company-description">
+                One of the world's largest semiconductor manufacturer
+            </div>
+            <ul>
+                <li>Developed and deployed production algorithms processing 50M+ CPU units annually, implementing robust statistical validation and automated anomaly detection to ensure manufacturing quality</li>
+                <li>Designed automated visualization and reporting pipeline for quality metrics, enabling data-driven decision making across global manufacturing sites</li>
+                <li>Optimized ML pipeline performance through distributed computing and efficient algorithm design, reducing inference time by 70% while scaling to handle 3x increased production volume</li>
+            </ul>
+        </div>
+    </section>
 
-            // Draw soil
-            ctx.fillStyle = '#3E2723';
-            ctx.beginPath();
-            ctx.ellipse(150, 200, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fill();
+    <section>
+        <h2>Education</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Tel Aviv University</div>
+                    <div class="position">Master of Science in Electrical Engineering</div>
+                </div>
+            </div>
+            <ul>
+                <li>Research Focus: Reinforcement Learning - Investigated novel approaches for policy optimization and reward modeling</li>
+                <li>Teaching Assistant: Data Structures and Algorithms, Python Programming
+                    <ul>
+                        <li>Mentored 100+ students in advanced programming concepts and algorithmic thinking</li>
+                        <li>Developed comprehensive curriculum materials and hands-on coding workshops</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-            if (stage > 0) {
-                // Draw stem
-                ctx.strokeStyle = '#2ecc71';
-                ctx.lineWidth = 5;
-                ctx.beginPath();
-                ctx.moveTo(150, 200);
-                ctx.lineTo(150, 200 - stage * 30);
-                ctx.stroke();
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Ben-Gurion University</div>
+                    <div class="position">Bachelor of Science in Electrical and Computer Engineering</div>
+                </div>
+            </div>
+            <ul>
+                <li>Focus on Machine Learning, Signal Processing, and Computer Architecture</li>
+            </ul>
+        </div>
+    </section>
 
-                // Draw leaves
-                for (let i = 1; i <= stage; i++) {
-                    drawLeaf(140, 200 - i * 30, -Math.PI / 6);
-                    drawLeaf(160, 200 - i * 30, Math.PI / 6);
-                }
-            }
-
-            // Draw avocado seed
-            ctx.fillStyle = '#8B4513';
-            ctx.beginPath();
-            ctx.ellipse(150, 200, 20, 15, 0, 0, 2 * Math.PI);
-            ctx.fill();
-        }
-
-        function drawLeaf(x, y, angle) {
-            ctx.save();
-            ctx.translate(x, y);
-            ctx.rotate(angle);
-            ctx.fillStyle = '#6ecc75';
-            ctx.beginPath();
-            ctx.ellipse(0, 0, 20, 10, 0, 0, 2 * Math.PI);
-            ctx.fill();
-            ctx.restore();
-        }
-
-        growButton.addEventListener('click', () => {
-            if (growthStage < maxGrowthStage) {
-                growthStage++;
-                drawAvocado(growthStage);
-                if (growthStage === maxGrowthStage) {
-                    growButton.textContent = 'Fully Grown! 🥑';
-                    growButton.disabled = true;
-                }
-            }
-        });
-
-        // Initial drawing
-        drawAvocado(growthStage);
-    </script>
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span class="skill-tag">Large Language Models</span>
+            <span class="skill-tag">Reinforcement Learning</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">AI Safety</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Distributed Computing</span>
+            <span class="skill-tag">ML Infrastructure</span>
+            <span class="skill-tag">RLHF</span>
+            <span class="skill-tag">Multimodal Systems</span>
+            <span class="skill-tag">RAG Systems</span>
+            <span class="skill-tag">Model Evaluation</span>
+        </div>
+    </section>
 </body>
 </html>
